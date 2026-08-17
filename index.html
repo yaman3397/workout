@@ -330,8 +330,8 @@
 <header class="header">
   <div class="header-inner">
     <h1>V-Taper <em>Weekly System</em></h1>
-    <span class="badge-split">6-Day Split</span>
-    <span class="header-meta">78 kg · 178 cm · Pure Vegetarian · Stuttgart, DE</span>
+    <span class="badge-split">6-Day Split · Core Day Added</span>
+    <span class="header-meta">75 kg · 178 cm · Pure Vegetarian · Stuttgart, DE</span>
   </div>
 </header>
 
@@ -368,7 +368,6 @@ const days = [
       {name:"Single-Arm Dumbbell Row",  sets:"3", reps:"10 each", rest:"90s",   note:"Full stretch at bottom, no hip rotation"},
       {name:"Straight-Arm Pulldown",    sets:"3", reps:"12–15",   rest:"60s",   note:"Isolates lats — keep arms nearly straight throughout"},
       {name:"Face Pulls (Rope)",        sets:"3", reps:"15–20",   rest:"60s",   note:"Rear delt + rotator cuff health — never skip"},
-      {name:"Plank Hold",              sets:"3", reps:"45–60s",  rest:"45s",   note:"Posterior pelvic tilt — no sagging hips"},
     ]
   },
   {
@@ -381,7 +380,6 @@ const days = [
       {name:"Cable Crossover (High to Low)",       sets:"3", reps:"12–15", rest:"60s",   note:"Targets lower/inner chest definition"},
       {name:"Tricep Rope Pushdown",                sets:"4", reps:"12–15", rest:"60s",   note:"Elbows pinned to sides — no flaring"},
       {name:"Overhead Tricep Extension (Cable)",   sets:"3", reps:"10–12", rest:"60s",   note:"Long head — critical for arm thickness from behind"},
-      {name:"Hollow Body Hold",                    sets:"3", reps:"30–45s",rest:"45s",   note:"Lower abs + full core stability"},
     ]
   },
   {
@@ -394,17 +392,19 @@ const days = [
       {name:"Cable Lateral Raises",                     sets:"3", reps:"15–20", rest:"45s",   note:"Constant tension — superset with DB raises optionally"},
       {name:"Rear Delt Fly (Pec Deck / Bent-Over DB)", sets:"4", reps:"15–20", rest:"60s",   note:"Critical for V-taper illusion and forward head correction"},
       {name:"Face Pulls (Rope)",                        sets:"3", reps:"20",    rest:"45s",   note:"External rotation — shoulder longevity investment"},
-      {name:"Leg Raises (Hanging or Lying)",            sets:"3", reps:"12–15", rest:"60s",   note:"No oblique work — avoids waist widening"},
     ]
   },
   {
-    day:"THU", label:"Day 4", focus:"Rest + Fasted Walk", tag:"RECOVERY",
-    color:"#7c3aed", lightBg:"#faf5ff", tagBg:"#ede9fe", tagColor:"#6d28d9",
-    goal:"Active recovery day. Also your weekly refeed — eat at TDEE (~2,600 kcal), mostly carbs. Glycogen replenishes for Friday's back session.",
+    day:"THU", label:"Day 4", focus:"Core — Six-Pack + Tight Waist", tag:"CORE PRIMARY",
+    color:"#dc2626", lightBg:"#fef2f2", tagBg:"#fee2e2", tagColor:"#b91c1c",
+    goal:"Dedicated abdominal session for rectus abdominis, lower abs, obliques and deep-core stability. Controlled reps and progressive overload — not endless high-rep crunches.",
     exercises:[
-      {name:"Fasted Morning Walk",          sets:"1", reps:"30–45 min", rest:"—", note:"Heart rate 100–120 BPM. Fat oxidation zone. No food beforehand."},
-      {name:"Full-Body Stretch / Mobility", sets:"1", reps:"15–20 min", rest:"—", note:"Hip flexors, thoracic spine, lats — areas taxed most this week"},
-      {name:"Foam Roll",                    sets:"1", reps:"10 min",    rest:"—", note:"Upper back, IT band, glutes — 45s per area minimum"},
+      {name:"Bicycle Crunch",                         sets:"3", reps:"16–20/side", rest:"60s", note:"Rotate through the torso, not the neck. Slow eccentric and full extension of the opposite leg."},
+      {name:"Captain's Chair Knee/Leg Raise",        sets:"3", reps:"10–15",     rest:"75s", note:"Curl the pelvis upward at the top — don't swing. Use the captain's chair version rather than momentum-driven hanging reps."},
+      {name:"Stability Ball Crunch",                  sets:"3", reps:"12–15",     rest:"60s", note:"Keep hips stable and curl the ribcage toward the pelvis. Progress with a light plate once 15 clean reps are easy."},
+      {name:"Reverse Crunch",                         sets:"3", reps:"12–15",     rest:"60s", note:"Lift the pelvis off the floor; don't throw the legs toward the face. Lower under complete control."},
+      {name:"Vertical Leg Crunch",                    sets:"3", reps:"10–15",     rest:"60s", note:"Keep legs vertical and curl the upper back toward the legs without pulling on the neck."},
+      {name:"Forearm Plank / Hover",                  sets:"3", reps:"30–60s",    rest:"60s", note:"Brace hard, squeeze glutes and maintain a neutral pelvis. Progress the hold before adding extra volume."},
     ]
   },
   {
@@ -417,7 +417,6 @@ const days = [
       {name:"Dumbbell Pullover",               sets:"3", reps:"12–15", rest:"60s",   note:"Lat stretch + serratus activation — underused movement"},
       {name:"Lat Pulldown (Neutral Grip)",     sets:"3", reps:"10–12", rest:"90s",   note:"Different grip from Monday — hits a different motor pattern"},
       {name:"Shrugs (DB or Barbell)",          sets:"3", reps:"15–20", rest:"60s",   note:"Upper trap development — adds to back thickness silhouette"},
-      {name:"Plank + Shoulder Taps",           sets:"3", reps:"20 taps",rest:"45s",  note:"Anti-rotation core stability — maintain neutral spine"},
     ]
   },
   {
@@ -477,13 +476,21 @@ const imgMap = {
   "Full-Body Stretch / Mobility":            "https://static.strengthlevel.com/images/illustrations/stretching-1000x1000.jpg",
   "Foam Roll":                               "https://static.strengthlevel.com/images/illustrations/foam-rolling-1000x1000.jpg",
   "Breathwork / Meditation":                 "https://static.strengthlevel.com/images/illustrations/stretching-1000x1000.jpg",
+
+  /* Dedicated Core Day — exercise-specific visuals */
+  "Bicycle Crunch":                           "https://static.strengthlevel.com/images/illustrations/bicycle-crunch-1000x1000.jpg",
+  "Captain's Chair Knee/Leg Raise":           "https://static.strengthlevel.com/images/illustrations/captains-chair-leg-raise-1000x1000.jpg",
+  "Stability Ball Crunch":                    "https://static.strengthlevel.com/images/illustrations/stability-ball-crunch-1000x1000.jpg",
+  "Reverse Crunch":                           "https://static.strengthlevel.com/images/illustrations/reverse-crunch-1000x1000.jpg",
+  "Vertical Leg Crunch":                      "https://static.strengthlevel.com/images/illustrations/vertical-leg-crunch-1000x1000.jpg",
+  "Forearm Plank / Hover":                    "https://static.strengthlevel.com/images/illustrations/plank-1000x1000.jpg",
 };
 
 const principles = [
-  { icon:"📈", title:"Progressive Overload",  desc:"Add reps or weight every session. Log every set — what's not tracked isn't progressing." },
-  { icon:"🚫", title:"No Oblique Work",       desc:"Zero side bends or oblique crunches. Protects waist narrowness for V-taper aesthetics." },
-  { icon:"🍚", title:"Refeed — Thursday",     desc:"Eat at TDEE (~2,600 kcal) on rest day. Mostly carbs. Restores leptin and breaks plateaus." },
-  { icon:"💪", title:"Pull-Up Priority",      desc:"Your #1 V-taper movement. Add weight once you hit 10 clean reps. Track every Monday." },
+  { icon:"📈", title:"Progressive Overload",  desc:"Add reps, time or load when you can complete every rep with clean technique. Log every working set." },
+  { icon:"🎯", title:"Waist-Focused Core",    desc:"Train the obliques for strength and definition, but avoid high-volume heavy side bends that add unnecessary lateral loading." },
+  { icon:"🔥", title:"Dedicated Core Day",    desc:"All direct abdominal work is consolidated on Thursday so the other training days can focus on their primary muscle groups." },
+  { icon:"💪", title:"Pull-Up Priority",      desc:"Your #1 V-taper movement. Add weight once you consistently hit the programmed rep target with clean form." },
 ];
 
 let activeDay = 0;
